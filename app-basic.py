@@ -12,8 +12,8 @@ def download_audio(youtube_url):
             'preferredquality': '192',
         }],
     }
-    with youtube_dl.YoutubeDL(yt_dl_options) as ydl:
-        ydl.download([youtube_url])
+    with youtube_dl.YoutubeDL(yt_dl_options) as yt_dl:
+        yt_dl.download([youtube_url])
 
 
 download_audio("https://youtu.be/OBLkvpBHLkc")
