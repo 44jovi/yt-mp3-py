@@ -42,3 +42,8 @@ This app is intended to be used with copyright-free media from YouTube. Users ta
     ```
     pip install youtube-dl
     ```
+- Install pydub
+
+  ```
+  pip install pydub
+  ```
