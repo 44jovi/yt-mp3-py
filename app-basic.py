@@ -1,5 +1,6 @@
 import youtube_dl
 
+# Basic core function of converting YouTube video to .mp3 format
 def download_audio(youtube_url):
   yt_dl_options = {
     'format': 'bestaudio/best',
@@ -13,5 +14,3 @@ def download_audio(youtube_url):
     ydl.download([youtube_url])
 
 download_audio("https://youtu.be/OBLkvpBHLkc")
-
-# WIP: Change URL argument to user CLI
