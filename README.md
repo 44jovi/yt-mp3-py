@@ -19,6 +19,8 @@ This app is intended to be used with copyright-free media from YouTube. Users ta
 
 ## Setup / Dependencies
 
+- Install [Python](https://www.python.org/downloads/) on your system
+
 - Clone repository
   ```
   git clone https://github.com/44jovi/yt-mp3-py.git
