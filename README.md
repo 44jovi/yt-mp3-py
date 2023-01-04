@@ -16,3 +16,27 @@ An app for converting YouTube videos into audio format (MP3) using Python 3 with
 ## Copyrights
 
 This app is intended to be used with copyright-free media from YouTube. Users take all responsibility for the app's correct usage.
+
+## Setup / Dependencies
+
+- Clone repository
+  ```
+  git clone https://github.com/44jovi/yt-mp3-py.git
+  ```
+- Install FFMPEG
+
+  - Linux (Debian)
+    ```
+    sudo apt-get install ffmpeg
+    ```
+  - Mac (macOS)
+    - Install [homebrew](https://brew.sh/) and then
+    ```
+    brew install ffmpeg
+    ```
+
+- Install [youtube-dl](https://github.com/ytdl-org/youtube-dl)
+  - Install [pip](https://pypi.org/project/pip/) then:
+    ```
+    pip install youtube-dl
+    ```
