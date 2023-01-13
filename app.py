@@ -21,6 +21,23 @@ def latest_mp3_filename():
     return max(mp3s_list, key=os.path.getctime)
 
 
+def get_video_time_milliseconds(video_time):
+    # Split video time ("HH:MM:SS" or "MM:SS") into an array
+    video_time_to_array = video_time.split(":")
+    # If "HH:MM:SS"
+    if (len(video_time_to_array) == 3):
+        hours = int(video_time_to_array[0]) * 60 * 60 * 1000
+        minutes = int(video_time_to_array[1]) * 60 * 1000
+        seconds = int(video_time_to_array[2]) * 1000
+    # Else if "MM:SS"
+    else:
+        hours = 0
+        minutes = int(video_time_to_array[0]) * 60 * 1000
+        seconds = int(video_time_to_array(1)) * 1000
+    # Return time in milliseconds
+    return hours + minutes + seconds
+
+
 def main():
     # WIP: Convert to user CLI to avoid hard-coding
     youtube_url = "https://youtu.be/OBLkvpBHLkc"
