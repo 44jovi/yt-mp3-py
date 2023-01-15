@@ -1,6 +1,7 @@
 import youtube_dl
 import glob
 import os
+from pydub import AudioSegment
 
 
 def download_audio(youtube_url):
@@ -36,6 +37,20 @@ def get_video_time_milliseconds(video_time):
         seconds = int(video_time_to_array(1)) * 1000
     # Return time in milliseconds
     return hours + minutes + seconds
+
+
+def get_trimmed(mp3_filename, start, end=""):
+    if (not mp3_filename):
+        raise Exception("No .mp3 found in directory.")
+    sound = AudioSegment.from_mp3(mp3_filename)
+    t0 = get_video_time_milliseconds(start)
+    print("Trimming file, ", mp3_filename, ".\n")
+    print("Starting from ", start, "...")
+    if (len(end) > 0):
+        print("... up to ", end, ".\n")
+        t1 = get_video_time_milliseconds(end)
+        return sound[t0: t1]
+    return sound[t0:]
 
 
 def main():
